@@ -1,0 +1,605 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #1a1a1a;
+}
+
+/* Header y Navegación */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url(img/FromSoftware\ Bosses\ -\ Trailer.mp4) center/cover;
+    min-height: 100vh;
+    position: static;
+}
+
+.logo-web {
+    align-items: center;
+    max-width: 75px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animación suave */
+}
+
+.logo-web:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    opacity: 0.8; /* Cambia la opacidad */
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 5%;
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+/* Sección de Juegos */
+.games-section {
+    padding: 5rem 5%;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: #e0e0e0;
+}
+
+.section-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #ffd700;
+    font-family: 'Cinzel', serif;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.game-card {
+    background: rgba(42, 42, 42, 0.8);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+.games-grid a {
+    text-decoration: none;
+}
+
+.game-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+}
+
+.game-card:hover::before {
+    opacity: 1;
+}
+
+.game-image {
+    height: 220px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.game-card:hover .game-image {
+    transform: scale(1.05);
+}
+
+.game-title {
+    font-size: 1.4rem;
+    color: #ffd700;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.game-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d0d0d0;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.game-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+    text-decoration: none;
+    border: 1px solid #ffd700;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+}
+
+.game-link:hover {
+    background-color: rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 10px #ffd700;
+}
+
+@media (max-width: 768px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .game-card {
+        padding: 1rem;
+    }
+
+    .game-image {
+        height: 180px;
+    }
+
+    .game-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Sección de Noticias - Susurros del Abismo */
+.news-section {
+    padding: 5rem 5%;
+    background: #0a0a0a url('path/to/dark-texture.jpg') repeat;
+    color: #d0d0d0;
+    position: relative;
+    overflow: hidden;
+}
+
+.bonfire-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bonfire {
+    width: 100px;
+    height: 120px;
+    background: url('path/to/bonfire-sprite.png') no-repeat;
+    background-size: cover;
+    animation: bonfire-flicker 0.5s steps(8) infinite;
+}
+
+@keyframes bonfire-flicker {
+    100% { background-position: -800px; }
+}
+
+.news-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.news-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffa500, 0 0 20px #ffa500, 0 0 30px #ffa500;
+    font-family: 'Cinzel', serif;
+}
+
+.news-scrolls {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.news-scroll {
+    flex-basis: calc(33.333% - 2rem);
+    min-width: 300px;
+    background: url('path/to/scroll-texture.png') no-repeat center/cover;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.news-scroll:hover {
+    transform: translateY(-10px) rotate(1deg);
+}
+
+.scroll-content {
+    background: rgba(10, 10, 10, 0.7);
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.scroll-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffd700;
+    font-family: 'Cinzel', serif;
+}
+
+.scroll-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: justify;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+    text-decoration: none;
+    border: 1px solid #ffd700;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-family: 'Cinzel', serif;
+}
+
+.read-more:hover {
+    background-color: rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 10px #ffd700;
+}
+
+@media (max-width: 768px) {
+    .news-title {
+        font-size: 2.5rem;
+    }
+    
+    .news-scroll {
+        flex-basis: 100%;
+    }
+}
+
+/* Efecto de niebla */
+.news-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(10,10,10,0.8) 0%, rgba(10,10,10,0.2) 100%);
+    pointer-events: none;
+}
+
+/* Animación de partículas flotantes */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.news-section::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 215, 0, 0.2);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 10px #ffd700,
+        0 0 20px #ffd700,
+        0 0 30px #ffd700;
+    animation: float 4s ease-in-out infinite;
+}
+
+.news-section::after {
+    left: 10%;
+    top: 20%;
+}
+
+.news-section::before {
+    right: 15%;
+    bottom: 30%;
+    width: 15px;
+    height: 15px;
+    animation-delay: -2s;
+}
+
+
+/* Sección Sobre la Saga */
+.about-section {
+    padding: 5rem 5%;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    color: #e0e0e0;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-text {
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+.video-story {
+    box-shadow: 0 0 20px rgba(255,215,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-story video {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+    }
+}
+
+/* Sección de Comunidad */
+.community-section {
+    padding: 6rem 5%;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.community-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('path/to/souls-texture.png') repeat;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.community-content {
+    position: relative;
+    z-index: 2;
+}
+
+.community-title {
+    font-size: 2.5rem;
+    color: #ffd700;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.community-description {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.community-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #ffd700, #ffed4a);
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.2);
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(255, 215, 0, 0.1);
+}
+    
+/* Footer */
+footer {
+    background: #1a1a1a;
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    opacity: 0.7;
+    transition: all 0.4s ease;
+    filter: sepia(1) hue-rotate(5deg) saturate(1.5);
+}
+
+.contact a {
+    text-decoration: none;
+    color: steelblue;
+}
+
+/* Estilos generales */
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffd700;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bosses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .community-links {
+        flex-direction: column;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}

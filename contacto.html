@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SoulsBorne - Contact Page</title>
+        <link rel="stylesheet" href="styles-contact.css">
+    </head>
+    <body>
+        <header class="hero">
+            <nav>
+                <div class="logo"><a href="souls-landing-page.html"><img src="img/logo.png" alt="logo-web" class="logo-web"></a></div>
+                <ul class="nav-links">
+                    <li><a href="souls-landing-page.html">Home</a></li>
+                    <li><a href="souls-landing-page.html#juegos">Sagas y Entregas</a></li>
+                    <li><a href="souls-landing-page.html#news">Noticias</a></li>
+                    <li><a href="souls-landing-page.html#comunidad">Comunidad</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contenido principal que va entre el header y footer -->
+
+        <div class="contact-wrapper">
+            <h1 class="contact-title">Comunícate con Nosotros</h1>
+            <p class="contact-subtitle">¿Tienes dudas sobre el contenido? ¿Necesitas soporte con alguna incidencia? Estamos aquí para tí.</p>
+        
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre de Usuario</label>
+                    <input type="text" id="name" name="name" required placeholder="Usuario">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email de Contacto</label>
+                    <input type="email" id="email" name="email" required placeholder="usuario@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Asunto</label>
+                    <select id="subject" name="subject" required>
+                        <option value="default">Seleccione una opción</option>
+                        <option value="ayuda">Necesito ayuda con un jefe</option>
+                        <option value="lore">Pregunta sobre alguna duda</option>
+                        <option value="bug">Reportar un error</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Especificaciones</label>
+                    <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                    <button type="reset" class="reset-btn">Borrar Mensaje</button>
+                </div>
+            </form>
+        
+            <div class="contact-info">
+                    <div class="info-item">
+                        <h3>Ubicación</h3>
+                        <p>Santuario de Enlace de Fuego</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Email</h3>
+                        <p>support@soulsborne.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Discord</h3>
+                        <p>SoulsBorne Community</p>
+                    </div>
+            </div>
+        </div>
+
+        
+        <footer>
+            <div class="social-media">
+                <div class="social-icons">
+                    <a href="https://www.fromsoftware.jp/jp/" target="_blank" class="social-icon">
+                        <img src="img/communityIcon.png" alt="FromSoftware" class="social-icon">
+                    </a>
+                    <a href="https://x.com/fromsoftware_pr" target="_blank" class="social-icon">
+                        <img src="img/X.jpg" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/fromsoftware_jp/" target="_blank" class="social-icon">
+                        <img src="img/instagram.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://www.youtube.com/user/FromSoftwareInc" target="_blank" class="social-icon">
+                        <img src="img/youtube-logo.png" alt="YouTube" class="social-icon">
+                    </a>
+                </div>
+                <p class="copyright">Creado con pasión por fans de la saga SoulsBorne</p>
+                <p>Todos los derechos reservados © 2024</p>
+                
+            </div>
+            
+        </footer>
+    </body>
+</html>
