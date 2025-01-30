@@ -1,0 +1,26 @@
+[
+    { "titulo": "Cars", "genero": "Animación", "año": 2006 },
+    { "titulo": "Matrix", "genero": "Ciencia Ficción", "año": 1999 },
+    { "titulo": "Titanic", "genero": "Romance", "año": 1997 },
+    { "titulo": "Avengers: Endgame", "genero": "Acción", "año": 2019 },
+    { "titulo": "Toy Story", "genero": "Animación", "año": 1995 },
+    { "titulo": "Inception", "genero": "Ciencia Ficción", "año": 2010 },
+    { "titulo": "Jurassic Park", "genero": "Aventura", "año": 1993 },
+    { "titulo": "Frozen", "genero": "Animación", "año": 2013 },
+    { "titulo": "The Dark Knight", "genero": "Acción", "año": 2008 },
+    { "titulo": "Forrest Gump", "genero": "Drama", "año": 1994 },
+    { "titulo": "Interstellar", "genero": "Ciencia Ficción", "año": 2014 },
+    { "titulo": "The Lion King", "genero": "Animación", "año": 2019 },
+    { "titulo": "Gladiator", "genero": "Acción", "año": 2000 },
+    { "titulo": "La La Land", "genero": "Musical", "año": 2016 },
+    { "titulo": "The Godfather", "genero": "Drama", "año": 1972 },
+    { "titulo": "Pulp Fiction", "genero": "Crimen", "año": 1994 },
+    { "titulo": "The Shawshank Redemption", "genero": "Drama", "año": 1994 },
+    { "titulo": "Spider-Man: Into the Spider-Verse", "genero": "Animación", "año": 2018 },
+    { "titulo": "Black Panther", "genero": "Acción", "año": 2018 },
+    { "titulo": "The Grand Budapest Hotel", "genero": "Comedia", "año": 2014 },
+    { "titulo": "Joker", "genero": "Drama", "año": 2019 },
+    { "titulo": "Avatar", "genero": "Ciencia Ficción", "año": 2009 }
+]
+  
+  
